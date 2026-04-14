@@ -1,0 +1,90 @@
+@import url('./vars.css');
+
+* {
+	box-sizing: border-box;
+}
+
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+.page {
+	font-family: var(--font-family);
+	font-weight: normal;
+}
+
+.page__body {
+	color: var(--main-color);
+	background-color: var(--bg-color);
+	min-width: 360px;
+}
+
+.container {
+	width: min(var(--container-width), 100% - var(--container-padding) * 2);
+	margin-inline: auto;
+}
+
+a {
+	color: var(--main-color);
+}
+
+button {
+	color: var(--dark-color);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+	outline: 1px solid var(--accent-color);
+	outline-offset: 2px;
+}
+
+img {
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.text-btn {
+	font-weight: 700;
+	font-size: 13px;
+	letter-spacing: 5%;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.letter-sp-3{
+  letter-spacing: 3%;
+}
+
+.letter-sp-5{
+  letter-spacing: 5%;
+}
+
+.text-regular,
+.text-xs {
+	font-weight: normal;
+}
+
+.text-regular {
+	/*min: 1eee */
+	font-size: clamp(13px, 12.3077px + 0.1923vw, 16px);
+}
+
+
+
+@media (width > 768px) {
+  .text-l {
+	letter-spacing: 3%;
+	line-height: 48px;
+	font-size: 24px;
+}
+}
+
+@media (width <= 768px) {
+	.text-l {
+		font-size: 18px;
+		line-height: 23px;
+    
+	}
+}
