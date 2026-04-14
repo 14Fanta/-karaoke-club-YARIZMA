@@ -1,0 +1,111 @@
+@import '../base/globals.css';
+@import '../base/vars.css';
+
+.header{
+  margin-bottom: clamp(52px, 2.413rem + 3.72vw, 110px);
+}
+
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 40px;
+}
+
+.header__info {
+	display: flex;
+	gap: clamp(35px, -25.59rem + 34.72vw, 85px);
+	color: var(--main-color);
+}
+
+.header__phone-link,
+.header__location-btn {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 35px;
+	font-size: 15px;
+	letter-spacing: 3%;
+}
+
+.header__phone-link::before {
+	position: absolute;
+	left: -17px;
+	content: '';
+	display: inline-block;
+	background-color: #ffffff12;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+}
+
+.header__location-text {
+	color: var(--accent-color);
+}
+
+@media (width <= 576px) {
+	.header__phone-link,
+	.header__location-text {
+		font-size: 14px;
+	}
+}
+
+.header__location-btn::before {
+	position: absolute;
+	left: -13px;
+	content: '';
+	display: inline-block;
+	background-color: #ffffff12;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+}
+
+.header__buttons-wrapper {
+	display: flex;
+	gap: 24px;
+}
+
+.header__button-rooms {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid var(--border-color);
+	border-radius: 40px;
+	background-color: transparent;
+	color: var(--main-color);
+	padding: 25px 57px;
+}
+
+.header__button-buy {
+	display: flex;
+	justify-content: center;
+	border: 1px solid var(--border-color);
+	border-radius: 40px;
+	padding: 25px 57px;
+	background-color: var(--main-color);
+	transition-property: opacity;
+	transition-duration: var(--transition-time);
+}
+
+.header__button-buy:active {
+	opacity: 0.8;
+}
+
+@media (width <= 1280px) {
+	.header__phone-link,
+	.header__button-rooms,
+	.header__button-buy,
+	.header__location-text {
+		display: none;
+		visibility: hidden;
+		/* z-index: var(--layer-2); */
+	}
+
+	.header__location-btn--close {
+		position: absolute;
+		bottom: 20px;
+		right: 82px;
+	}
+}
