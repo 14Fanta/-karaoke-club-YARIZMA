@@ -12,6 +12,9 @@
 .page {
 	font-family: var(--font-family);
 	font-weight: normal;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height:100vh;
 }
 
 .page__body {
@@ -53,38 +56,48 @@ img {
 	text-align: center;
 }
 
-.letter-sp-3{
-  letter-spacing: 3%;
+.letter-sp-3 {
+	letter-spacing: 3%;
 }
 
-.letter-sp-5{
-  letter-spacing: 5%;
-}
-
-.text-regular,
-.text-xs {
-	font-weight: normal;
+.letter-sp-5 {
+	letter-spacing: 5%;
 }
 
 .text-regular {
-	/*min: 1eee */
+	font-weight: normal;
+}
+
+.text-xxs{
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 20%;
+}
+
+.text-regular {
+	/*min: 13px max: 16px*/
 	font-size: clamp(13px, 12.3077px + 0.1923vw, 16px);
 }
 
-
-
 @media (width > 768px) {
-  .text-l {
-	letter-spacing: 3%;
-	line-height: 48px;
-	font-size: 24px;
-}
+	.text-sm {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.text-l {
+		line-height: 48px;
+		font-size: 24px;
+	}
 }
 
 @media (width <= 768px) {
+	.text-s {
+		font-size: 13px;
+		line-height: 18px;
+	}
+
 	.text-l {
 		font-size: 18px;
 		line-height: 23px;
-    
 	}
 }
