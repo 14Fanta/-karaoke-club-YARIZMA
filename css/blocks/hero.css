@@ -55,7 +55,7 @@
 
 @media (width <= 1508px) {
 	.hero__img-decor {
-		right: 0px;
+		right: 10px;
 	}
 
 	.hero__img-decor::after {
