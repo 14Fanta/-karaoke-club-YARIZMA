@@ -1,11 +1,12 @@
 @import '../base/globals.css';
 @import '../base/vars.css';
 
-.header{
-  margin-bottom: clamp(52px, 2.413rem + 3.72vw, 110px);
+.header {
+	margin-bottom: clamp(52px, 2.413rem + 3.72vw, 110px);
 }
 
 .header__container {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

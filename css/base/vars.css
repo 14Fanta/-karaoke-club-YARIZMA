@@ -11,6 +11,7 @@
 	--bg-menu: #282b32;
 	--bg-text: #343a3e;
 	--color-btn: #252121;
+  --dark-card-color:#202124;
 	--bg-gradient-btn: linear-gradient(
 		141deg,
 		#ea422a 0%,
@@ -27,6 +28,8 @@
    /* font-family */
 	--font-family: 'Muller', sans-serif; 
   /* layer */
+	--layer-negative-2: -2;
+	--layer-negative-1: -1;
 	--layer-1: 1;
 	--layer-2: 2;
 	--layer-3: 3; 

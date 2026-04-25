@@ -1,20 +1,22 @@
 @import url('./vars.css');
 
 * {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
 *::before,
 *::after {
+	-webkit-box-sizing: inherit;
 	box-sizing: inherit;
 }
 
 .page {
 	font-family: var(--font-family);
 	font-weight: normal;
-  overflow-x: hidden;
-  overflow-y: auto;
-  min-height:100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	/* min-height:200vh; */
 }
 
 .page__body {
@@ -48,6 +50,12 @@ img {
 	object-fit: cover;
 }
 
+h1,
+p,
+li {
+  -webkit-user-select: none;
+}
+
 .text-btn {
 	font-weight: 700;
 	font-size: 13px;
@@ -68,14 +76,14 @@ img {
 	font-weight: normal;
 }
 
-.text-xxs{
-  font-weight: 700;
-  font-size: 9px;
-  letter-spacing: 20%;
+.text-xxs {
+	font-weight: 700;
+	font-size: 9px;
+	letter-spacing: 20%;
 }
 
 .text-regular {
-	/*min: 13px max: 16px*/
+	/* min: 13px max: 16px */
 	font-size: clamp(13px, 12.3077px + 0.1923vw, 16px);
 }
 
