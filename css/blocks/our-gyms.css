@@ -1,0 +1,162 @@
+@import url('../base/vars.css');
+
+.our__gyms {
+	background-color: var(--second-bg-color);
+}
+
+.our__gyms-container {
+	padding-top: 111px;
+}
+
+.our__gyms-title {
+	text-transform: uppercase;
+	margin-bottom: 45px;
+}
+
+.our__gyms-text {
+	text-transform: uppercase;
+	margin-bottom: 80px;
+}
+
+@media (width > 998px) {
+	.our__gyms-text {
+		width: 500px;
+	}
+}
+
+@media (width <= 998px) {
+	.our__gyms-text {
+		width: 350px;
+	}
+}
+
+@media (width<=768px) {
+	.our__gyms-text {
+		width: 320px;
+	}
+}
+
+.our__gyms-halls__list {
+	display: flex;
+	gap: 44px;
+	margin-bottom: 45px;
+}
+
+.our__gyms-halls__text {
+	font-weight: 700;
+	transition: color var(--second-transition-time);
+}
+
+.our__gyms-halls__text:hover {
+	color: var(--second-accent-color);
+}
+
+.our__gyms-information-list {
+	display: flex;
+	flex-direction: column;
+	gap: 21px;
+	margin-bottom: 78px;
+}
+
+.our__gyms-information-item {
+	display: flex;
+	gap: 11px;
+	background: linear-gradient(
+		90deg,
+		rgba(246, 144, 32, 0.4) 0%,
+		rgba(246, 144, 32, 0.4) 30%,
+		rgba(246, 144, 32, 0.4) 50%,
+		rgba(246, 144, 32, 0) 80%
+	);
+	padding: 5px;
+}
+
+.our__gyms-halls__text {
+	color: var(--gray-btn-color);
+	text-transform: uppercase;
+}
+
+.our__gyms-halls__text-selected {
+	color: var(--second-accent-color);
+}
+
+.our__gyms-information-item {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.our__gyms-information-item:first-child {
+	width: 134px;
+}
+.our__gyms-information-item:nth-child(2) {
+	width: 158px;
+}
+.our__gyms-information-item:last-child {
+	width: 267px;
+}
+
+.our__gyms-information-item::before {
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	background-size: cover;
+	background-position: center;
+}
+
+.our__gyms-information-item:first-child::before {
+	content: '';
+	background-image: url(../../icons/room.svg);
+}
+
+.our__gyms-information-item:nth-child(2)::before {
+	content: '';
+	background-image: url(../../icons/expand.svg);
+	width: 19px;
+	height: 19px;
+}
+
+.our__gyms-information-item:last-child::before {
+	content: '';
+	background-image: url(../../icons/people.svg);
+}
+
+.our__gyms-buttons {
+	display: flex;
+	gap: 32px;
+	align-items: center;
+}
+
+.our__gyms-buttons-btn_left,
+.our__gyms-buttons-btn_right {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #2e3441;
+	border-radius: 100%;
+	padding: 27px 30px;
+	transition: background-color var(--transition-time);
+}
+
+.our__gyms-buttons-arrow-left {
+	transform: rotate(180deg);
+}
+
+@media (any-hover: hover) {
+	.our__gyms-buttons-btn_right:not(:disabled):hover,
+	.our__gyms-buttons-btn_left:not(:disabled):hover {
+		background-color: #464646;
+	}
+}
+
+.our__gyms-buttons-btn_right:active,
+.our__gyms-buttons-btn_left:active {
+	background-color: #2e3441;
+}
+
+.our__gyms-buttons-btn_right:disabled,
+.our__gyms-buttons-btn_left:disabled {
+	opacity: 0.5;
+	pointer-events: none;
+	cursor: not-allowed;
+}
