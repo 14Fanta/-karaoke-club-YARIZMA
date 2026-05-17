@@ -7,13 +7,21 @@
 
 .header__container {
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	padding-top: 40px;
 }
 
 .header__info {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	gap: clamp(35px, -25.59rem + 34.72vw, 85px);
 	color: var(--main-color);
@@ -22,8 +30,14 @@
 .header__phone-link,
 .header__location-btn {
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	gap: 35px;
 	font-size: 15px;
@@ -64,13 +78,21 @@
 }
 
 .header__buttons-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	gap: 24px;
 }
 
 .header__button-rooms {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	border: 1px solid var(--border-color);
 	border-radius: 40px;
@@ -80,13 +102,21 @@
 }
 
 .header__button-buy {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	border: 1px solid var(--border-color);
 	border-radius: 40px;
 	padding: 25px 57px;
 	background-color: var(--main-color);
+	-webkit-transition-property: opacity;
+	-o-transition-property: opacity;
 	transition-property: opacity;
+	-webkit-transition-duration: var(--transition-time);
+	-o-transition-duration: var(--transition-time);
 	transition-duration: var(--transition-time);
 }
 

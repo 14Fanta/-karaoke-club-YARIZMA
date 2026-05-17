@@ -13,10 +13,11 @@
 
 .page {
 	font-family: var(--font-family);
-	font-weight: normal;
 	overflow-x: hidden;
 	overflow-y: auto;
-	min-height: 200vh;
+	font-weight: normal;
+	min-height: 500vh;
+	-webkit-user-select: none;
 }
 
 .page__body {
@@ -69,6 +70,10 @@ li {
 	text-align: center;
 }
 
+.lh-24 {
+	line-height: 24px;
+}
+
 .text-xl,
 .letter-sp-3,
 .title-xxs,
@@ -102,8 +107,8 @@ li {
 	}
 }
 
-.text-xxxl{
-  font-size: 15px;
+.text-xxxl {
+	font-size: 15px;
 }
 
 .text-regular {
@@ -152,4 +157,49 @@ li {
 	.text-xxl {
 		line-height: 23px;
 	}
+}
+
+.buy-btn {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	text-transform: uppercase;
+	color: var(--color-btn);
+	background: var(--bg-gradient-btn);
+	border-radius: 60px;
+	font-weight: 700;
+	font-size: 13px;
+	height: 70px;
+	-webkit-transition:
+		opacity var(--transition-time),
+		background var(--transition-time) ease-in-out;
+	-o-transition:
+		opacity var(--transition-time),
+		background var(--transition-time) ease-in-out;
+	transition:
+		opacity var(--transition-time),
+		background var(--transition-time) ease-in-out,
+		animation var(--transition-time);
+}
+
+@media (width <= 998px) {
+	.buy-btn {
+		height: 50px;
+	}
+}
+
+.buy-btn:active {
+	opacity: 0.8;
+}
+
+.accent {
+	color: var(--accent-color);
 }

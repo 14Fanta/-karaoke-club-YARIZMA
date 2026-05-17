@@ -1,0 +1,246 @@
+.benefits__container {
+	position: relative;
+}
+
+.benefits__title {
+	text-transform: uppercase;
+	margin-bottom: 33px;
+}
+
+@media (width > 772px) {
+	.benefits__title > span.top {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	.benefits__title > span.bottom {
+		display: inline-block;
+	}
+}
+
+@media (width <= 772px) {
+	.benefits__title > span.top {
+		display: block;
+	}
+
+	.benefits__title > span.bottom {
+		display: block;
+	}
+
+	.benefits__title {
+		margin-bottom: 24px;
+	}
+}
+
+.benefits__main-text {
+	text-transform: uppercase;
+}
+
+@media (width > 772px) {
+	.benefits__main-text {
+		margin-bottom: 45px;
+	}
+}
+
+@media (width <= 772px) {
+	.benefits__main-text {
+		margin-bottom: 17px;
+	}
+}
+
+.benefits__list {
+	display: grid;
+}
+
+@media (width > 380px) {
+	.benefits__list {
+		grid-template-columns: repeat(auto-fit, minmax(157px,433px));
+		grid-template-rows: repeat(2, 298px);
+		grid-auto-rows: 298px;
+		gap: 30px;
+	}
+}
+
+@media (width <= 380px) {
+	.benefits__list {
+		grid-template-columns: repeat(6, 156px);
+		grid-template-rows: repeat(2, 129px);
+		grid-auto-rows: 129px;
+		gap: 16px;
+	}
+
+	.benefits__item:nth-child(2) {
+		grid-column: 2;
+		grid-row: 1 / 2 span;
+	}
+	.benefits__item:nth-child(3) {
+		grid-column: 1;
+		grid-row: 2 / 2 span;
+		height: 173px;
+	}
+	.benefits__item:nth-child(4) {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		grid-column: 1;
+		grid-row: 3 / 2 span;
+		height: 224px;
+		transform: translateY(35px);
+	}
+	.benefits__item:nth-child(5) {
+		grid-column: 2;
+		grid-row: 3 / 2 span;
+		height: 163px;
+	}
+	.benefits__item:nth-child(6) {
+		grid-column: 2;
+		grid-row: 4 / 2 span;
+		height: 247px;
+		transform: translateY(25px);
+	}
+}
+
+.benefits__item {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+@media (width > 380px) {
+	.benefits__item {
+		padding-left: 50px;
+		padding-top: 50px;
+	}
+}
+
+@media (width <= 380px) {
+	.benefits__item {
+		padding-left: 15px;
+		padding-top: 15px;
+	}
+}
+
+.benefits__item:nth-child(1),
+.benefits__item:nth-child(3),
+.benefits__item:nth-child(5) {
+	background-color: var(--first-card-color);
+}
+
+.benefits__item:nth-child(2),
+.benefits__item:nth-child(4),
+.benefits__item:nth-child(6) {
+	background-color: var(--second-card-color);
+}
+
+.benefits__item-header {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+}
+
+.benefits__item-header-1 {
+	justify-content: flex-end;
+	transform: translateY(5px);
+}
+
+.benefits__item-header-1 > p > span.bottom {
+	display: inline-block;
+}
+
+@media (width <= 768px) {
+	.benefits__item-header-1 > p > span.bottom {
+		display: block;
+	}
+}
+
+@media (width <= 380px) {
+	.benefits__icon {
+		width: 44px;
+		height: 44px;
+	}
+}
+
+.benefits__item-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.benefits__text {
+	font-weight: 800;
+}
+
+@media (width > 772px) {
+	.benefits__text {
+		font-size: 14px;
+		line-height: 18px;
+	}
+}
+
+@media (width <= 772px) {
+	.benefits__text {
+		font-size: 14px;
+		line-height: 18px;
+	}
+}
+
+.benefits__list-benefits__item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+@media (width > 380px) {
+	.benefits__list-benefits__item {
+		font-size: 16px;
+	}
+}
+
+@media (width <= 380px) {
+	.benefits__list-benefits__item {
+		font-size: 13px;
+		line-height: 18px;
+	}
+}
+
+.benefits__list-benefits__item::before {
+	content: '';
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url('../../icons/checked-ico.svg') no-repeat center / cover;
+	flex-shrink: 0;
+}
+
+.benefits__list-benefits__item--allowance {
+	display: inline-block;
+}
+
+.benefits__list-benefits__item-sentence {
+	display: inline-block;
+}
+
+@media (width > 380px) {
+  .benefits__list-benefits__item-sentence {
+	transform: translateX(30px);
+
+  }
+}
+
+@media (width <= 380px) {
+  .benefits__list-benefits__item-sentence {
+    transform: translateX(0);
+  }
+}
+
+.benefits__list-benefits__item--allowance::before {
+	margin-right: 8px;
+}
+
+.benefits__img-wrapper {
+	position: absolute;
+	top: 36px;
+	right: 0;
+	background: url('../../images/benefits/benefits-bg.png') no-repeat center /
+		cover;
+}

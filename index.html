@@ -3,6 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Караоке-клуб YARIZMA: арендуйте залы до 10 человек, без пробкового сбора и депозита. Профессиональное караоке AST-50, скидки в День Рождения. М. Лубянка"
+		/>
 		<title>YARIZMA</title>
 		<link rel="stylesheet" href="./css/index.css" />
 		<link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon" />
@@ -15,6 +19,7 @@
 					><img
 						src="./icons/logo.svg"
 						alt="Логотип клуба Xarizma"
+            title="Yarizma"
 						width="293"
 						height="67"
 						loading="lazy"
@@ -79,14 +84,17 @@
 			<section class="hero">
 				<div class="container hero__container">
 					<div class="hero__img-decor">
-						<img
-							class="hero__img-img"
-							src="./images/header_img-girl.png"
-							alt="Девушка, которая поёт караоке в караоке-клубе, держит в руках микрофон. Вся энергичная и очень весёлая. У неё имеется на лице макияж, одета она в голубые оттенки цветов на одежде."
-							width="700"
-							height="1247"
-							loading="lazy"
-						/>
+						<picture>
+							<source srcset="./images/hero_img-girl.webp" type="image/webp" />
+							<img
+								class="hero__img-img"
+								src="./images/hero_img-girl.png"
+								alt="Девушка, которая поёт караоке в караоке-клубе, держит в руках микрофон. Вся энергичная и очень весёлая. У неё имеется на лице макияж, одета она в голубые оттенки цветов одежды."
+								width="700"
+								height="1247"
+								loading="lazy"
+							/>
+						</picture>
 					</div>
 					<p class="hero__text letter-sp-3">
 						Арендуй Караоке-Зал до 10 человек
@@ -112,7 +120,7 @@
 						<div class="hero__content-benefits">
 							<div class="hero__button-wrapper">
 								<button
-									class="hero__btn-buy letter-sp-5"
+									class="hero__btn-buy buy-btn letter-sp-5"
 									title="Забронировать"
 									aria-label="кнопка забронировать"
 									data-modal-button="buy"
@@ -126,7 +134,7 @@
 						<div class="hero__content-information">
 							<div class="hero__content-information__img-wrapper">
 								<picture
-									><source srcset="./images/tag.webp" type="webp/img" />
+									><source srcset="./images/tag.webp" type="image/webp" />
 									<img
 										class="hero__content-information-img"
 										src="./images/tag.png"
@@ -183,7 +191,7 @@
 									width="67"
 									height="67"
 								>
-									<use href="./icons/icon_champagne_bottle.svg"></use>
+									<use href="./icons/sprite.svg#bottle-champagne-icon"></use>
 								</svg>
 								<span class="hero__content-characteristics-line"></span>
 							</div>
@@ -198,7 +206,7 @@
 									width="68"
 									height="68"
 								>
-									<use href="./icons/icon_cash_in_hand.svg"></use>
+									<use href="./icons/sprite.svg#cash_hand"></use>
 								</svg>
 								<span class="hero__content-characteristics-line"></span>
 							</div>
@@ -213,14 +221,14 @@
 								>
 									<use
 										class="hero__content-characteristics-img"
-										href="./icons/icon_confetti.svg"
+										href="./icons/sprite.svg#confetti-ico"
 									></use>
 								</svg>
 								<span class="hero__content-characteristics-line"></span>
 							</div>
 							<p class="hero__content-characteristics-text">
 								<span class="top">Скидка </span>
-								<span class="bottom">в День Рождения</span>
+								в День Рождения
 							</p>
 						</li>
 					</ul>
@@ -228,38 +236,416 @@
 			</section>
 			<section class="our__gyms">
 				<div class="our__gyms-container container">
-					<h2 class="our__gyms-title title-xxl">Наши залы</h2>
 					<div class="our__gyms-content">
+						<h2 class="our__gyms-title title-xxl">Наши залы</h2>
 						<p class="our__gyms-text text-xxl">
 							Ознакомтесь с атмосферой праздника
 						</p>
-						<div class="our__gyms-halls">
-							<ul class="our__gyms-halls__list">
-								<li class="our__gyms-halls__item">
+						<div class="our__gyms-content__main-information">
+							<div class="our__gyms-halls">
+								<div class="our__gyms-halls__list" data-sizes="list">
 									<button
-										class="our__gyms-halls__text our__gyms-halls__text-selected text-xxxl"
+										class="text-xxxl our__gyms-halls__text our__gyms-halls__text-selected"
+										aria-label="Выбрать слайд"
+										title="Hall 1"
+										data-sizes="button"
 									>
 										Hall №1
 									</button>
-								</li>
-								<li class="our__gyms-halls__item">
-									<button class="our__gyms-halls__text text-xxxl">
+									<button
+										class="text-xxxl our__gyms-halls__text"
+										aria-label="Выбрать слайд"
+										title="Hall 2"
+										data-sizes="button"
+									>
 										Hall №2
 									</button>
-								</li>
-								<li class="our__gyms-halls__item">
-									<button class="our__gyms-halls__text text-xxxl">
+									<button
+										class="text-xxxl our__gyms-halls__text"
+										aria-label="Выбрать слайд"
+										title="Hall 3"
+										data-sizes="button"
+									>
 										Hall №3
 									</button>
-								</li>
-								<li class="our__gyms-halls__item">
-									<button class="our__gyms-halls__text text-xxxl">
+									<button
+										class="text-xxxl our__gyms-halls__text"
+										aria-label="Выбрать слайд"
+										title="Hall 5"
+										data-sizes="button"
+									>
 										Hall №5
 									</button>
-								</li>
-							</ul>
+								</div>
+								<div class="our__gyms-wrapper__swiper">
+									<div
+										class="our__gyms-swiper__wrapper our__gyms-swiper__wrapper--active"
+									>
+										<div class="our__gyms-img__main">
+											<picture>
+												<source
+													srcset="./images/our-gyms/main-img__our-gyms.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our__gyms-img__main-img"
+													src="./images/our-gyms/main-img__our-gyms.png"
+													alt="Зал для караоке с неоновым логотипом „YARIZMA“ "
+													width="1407"
+													height="832"
+													loading="lazy"
+												/>
+											</picture>
+										</div>
+										<footer class="our__gyms-img__other">
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/our-gyms__img1.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/our-gyms__img1.png"
+													alt="Вип-комната с домашним кинотеатром и неоновой подсветкой."
+													width="281"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/our-gyms__img2.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/our-gyms__img2.png"
+													alt="Интерьер вип-комнаты с кальяном и фруктами на столе."
+													width="282"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/our-gyms__img3.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/our-gyms__img3.png"
+													alt="Комната с проекционным экраном и кожаными креслами."
+													width="282"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/our-gyms__img4.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/our-gyms__img4.png"
+													alt="Круговой стол с свечами в вип-комнате с неоновой подсветкой."
+													width="282"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/our-gyms__img5.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/our-gyms__img5.png"
+													alt="Вип-комната с кожаным диваном и настенным декором."
+													width="282"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+										</footer>
+									</div>
+									<div class="our__gyms-swiper__wrapper">
+										<div class="our__gyms-img__main">
+											<picture>
+												<source
+													srcset="./images/our-gyms/our-gyms__img1.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our__gyms-img__main-img"
+													src="./images/our-gyms/our-gyms__img1.png"
+													alt="Зал для караоке с неоновым логотипом „YARIZMA“"
+													width="1407"
+													height="832"
+													loading="lazy"
+												/>
+											</picture>
+										</div>
+										<footer class="our__gyms-img__other">
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/main-img__our-gyms.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/main-img__our-gyms.png"
+													alt="Вип-комната с домашним кинотеатром и неоновой подсветкой."
+													width="281"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/our-gyms__img2.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/our-gyms__img2.png"
+													alt="Интерьер вип-комнаты с кальяном и фруктами на столе."
+													width="282"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/our-gyms__img3.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/our-gyms__img3.png"
+													alt="Комната с проекционным экраном и кожаными креслами."
+													width="282"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/our-gyms__img4.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/our-gyms__img4.png"
+													alt="Круговой стол с свечами в вип-комнате с неоновой подсветкой."
+													width="282"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/our-gyms__img5.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/our-gyms__img5.png"
+													alt="Вип-комната с кожаным диваном и настенным декором."
+													width="282"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+										</footer>
+									</div>
+									<div class="our__gyms-swiper__wrapper">
+										<div class="our__gyms-img__main">
+											<picture>
+												<source
+													srcset="./images/our-gyms/our-gyms__img2.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our__gyms-img__main-img"
+													src="./images/our-gyms/our-gyms__img2.png"
+													alt="Зал для караоке с неоновым логотипом „YARIZMA“ "
+													width="1407"
+													height="832"
+													loading="lazy"
+												/>
+											</picture>
+										</div>
+										<footer class="our__gyms-img__other">
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/our-gyms__img1.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/our-gyms__img1.png"
+													alt="Вип-комната с домашним кинотеатром и неоновой подсветкой."
+													width="281"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/main-img__our-gyms.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/main-img__our-gyms.png"
+													alt="Интерьер вип-комнаты с кальяном и фруктами на столе."
+													width="282"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/our-gyms__img3.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/our-gyms__img3.png"
+													alt="Комната с проекционным экраном и кожаными креслами."
+													width="282"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/our-gyms__img4.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/our-gyms__img4.png"
+													alt="Круговой стол с свечами в вип-комнате с неоновой подсветкой."
+													width="282"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/our-gyms__img5.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/our-gyms__img5.png"
+													alt="Вип-комната с кожаным диваном и настенным декором."
+													width="282"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+										</footer>
+									</div>
+									<div class="our__gyms-swiper__wrapper">
+										<div class="our__gyms-img__main">
+											<picture>
+												<source
+													srcset="./images/our-gyms/our-gyms__img5.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our__gyms-img__main-img"
+													src="./images/our-gyms/our-gyms__img5.png"
+													alt="Зал для караоке с неоновым логотипом „YARIZMA“ "
+													width="1407"
+													height="832"
+													loading="lazy"
+												/>
+											</picture>
+										</div>
+										<footer class="our__gyms-img__other">
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/our-gyms__img1.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/our-gyms__img1.png"
+													alt="Вип-комната с домашним кинотеатром и неоновой подсветкой."
+													width="281"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/our-gyms__img2.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/our-gyms__img2.png"
+													alt="Интерьер вип-комнаты с кальяном и фруктами на столе."
+													width="282"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/our-gyms__img3.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/our-gyms__img3.png"
+													alt="Комната с проекционным экраном и кожаными кресла ми."
+													width="282"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/our-gyms__img4.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/our-gyms__img4.png"
+													alt="Круговой стол с свечами в вип-комнате с неоновой подсветкой."
+													width="282"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+											<picture class="our-gyms__other-picture">
+												<source
+													srcset="./images/our-gyms/main-img__our-gyms.webp"
+													type="image/webp"
+												/>
+												<img
+													class="our-gyms__other-img"
+													src="./images/our-gyms/main-img__our-gyms.png"
+													alt="Вип-комната с кожаным диваном и настенным декором."
+													width="282"
+													height="168"
+													loading="lazy"
+												/>
+											</picture>
+										</footer>
+									</div>
+								</div>
+							</div>
 							<div class="our__gyms-information">
-								<ul class="our__gyms-information-list">
+								<ul
+									class="our__gyms-information-list letter-sp-5 our__gyms-information-list--active"
+								>
 									<li class="our__gyms-information-item">
 										<p class="our__gyms-information-text">№ 1</p>
 									</li>
@@ -270,48 +656,288 @@
 										<p class="our__gyms-information-text">до 20-ти человек</p>
 									</li>
 								</ul>
-							</div>
-							<div class="our__gyms-buttons">
-								<button
-									class="our__gyms-buttons-btn_left"
-									aria-label="Кнопка влево"
-									title="Влево"
-                  disabled
-								>
-									<svg
-										class="our__gyms-buttons-arrow-left"
-										width="12"
-										height="19"
+								<div class="our__gyms-buttons our__gyms-buttons--active">
+									<button
+										class="our__gyms-buttons__btn_left our__gyms-button"
+										aria-label="Кнопка влево"
+										title="Влево"
 									>
-										<use href="icons/sprite.svg#arrow"></use>
-									</svg>
-								</button>
-								<p class="our__gyms-buttons-numbers">1 из 17</p>
-								<button
-									class="our__gyms-buttons-btn_right"
-									aria-label="Кнопка вправо"
-									title="Вправо"
-                  disabled
-								>
-									<svg
-										class="our__gyms-buttons-arrow-right"
-										width="12"
-										height="19"
+										<svg
+											class="our__gyms-buttons-arrow-right our__gyms-buttons-arrow"
+											width="12"
+											height="19"
+										>
+											<use href="icons/sprite.svg#arrow"></use>
+										</svg>
+									</button>
+									<p class="our__gyms-buttons-numbers">
+										<span class="our__gyms-accent">1</span> из 17
+									</p>
+									<button
+										class="our__gyms-buttons__btn_right our__gyms-button"
+										aria-label="Кнопка вправо"
+										title="Вправо"
 									>
-										<use href="icons/sprite.svg#arrow"></use>
-									</svg>
-								</button>
+										<svg
+											class="our__gyms-buttons-arrow-right our__gyms-buttons-arrow"
+											width="12"
+											height="19"
+										>
+											<use href="icons/sprite.svg#arrow"></use>
+										</svg>
+									</button>
+								</div>
+								<ul class="our__gyms-information-list letter-sp-5">
+									<li class="our__gyms-information-item">
+										<p class="our__gyms-information-text">№ 2</p>
+									</li>
+									<li class="our__gyms-information-item">
+										<p class="our__gyms-information-text">80 м<sup>2</sup></p>
+									</li>
+									<li class="our__gyms-information-item">
+										<p class="our__gyms-information-text">до 50-ти человек</p>
+									</li>
+								</ul>
+								<div class="our__gyms-buttons">
+									<button
+										class="our__gyms-buttons__btn_left our__gyms-button"
+										aria-label="Кнопка влево"
+										title="Влево"
+									>
+										<svg
+											class="our__gyms-buttons-arrow-right our__gyms-buttons-arrow"
+											width="12"
+											height="19"
+										>
+											<use href="icons/sprite.svg#arrow"></use>
+										</svg>
+									</button>
+									<p class="our__gyms-buttons-numbers">
+										<span class="our__gyms-accent">2</span> из 17
+									</p>
+									<button
+										class="our__gyms-buttons__btn_right our__gyms-button"
+										aria-label="Кнопка вправо"
+										title="Вправо"
+									>
+										<svg
+											class="our__gyms-buttons-arrow-right our__gyms-buttons-arrow"
+											width="12"
+											height="19"
+										>
+											<use href="icons/sprite.svg#arrow"></use>
+										</svg>
+									</button>
+								</div>
+								<ul class="our__gyms-information-list letter-sp-5">
+									<li class="our__gyms-information-item">
+										<p class="our__gyms-information-text">№ 3</p>
+									</li>
+									<li class="our__gyms-information-item">
+										<p class="our__gyms-information-text">60 м<sup>2</sup></p>
+									</li>
+									<li class="our__gyms-information-item">
+										<p class="our__gyms-information-text">до 60-ти человек</p>
+									</li>
+								</ul>
+								<div class="our__gyms-buttons">
+									<button
+										class="our__gyms-buttons__btn_left our__gyms-button"
+										aria-label="Кнопка влево"
+										title="Влево"
+									>
+										<svg
+											class="our__gyms-buttons-arrow-right our__gyms-buttons-arrow"
+											width="12"
+											height="19"
+										>
+											<use href="icons/sprite.svg#arrow"></use>
+										</svg>
+									</button>
+									<p class="our__gyms-buttons-numbers">
+										<span class="our__gyms-accent">1</span> из 17
+									</p>
+									<button
+										class="our__gyms-buttons__btn_right our__gyms-button"
+										aria-label="Кнопка вправо"
+										title="Вправо"
+									>
+										<svg
+											class="our__gyms-buttons-arrow-right our__gyms-buttons-arrow"
+											width="12"
+											height="19"
+										>
+											<use href="icons/sprite.svg#arrow"></use>
+										</svg>
+									</button>
+								</div>
+								<ul class="our__gyms-information-list letter-sp-5">
+									<li class="our__gyms-information-item">
+										<p class="our__gyms-information-text">№ 5</p>
+									</li>
+									<li class="our__gyms-information-item">
+										<p class="our__gyms-information-text">100 м<sup>2</sup></p>
+									</li>
+									<li class="our__gyms-information-item">
+										<p class="our__gyms-information-text">до 100-та человек</p>
+									</li>
+								</ul>
+								<div class="our__gyms-buttons">
+									<button
+										class="our__gyms-buttons__btn_left our__gyms-button"
+										aria-label="Кнопка влево"
+										title="Влево"
+									>
+										<svg
+											class="our__gyms-buttons-arrow-right our__gyms-buttons-arrow"
+											width="12"
+											height="19"
+										>
+											<use href="icons/sprite.svg#arrow"></use>
+										</svg>
+									</button>
+									<p class="our__gyms-buttons-numbers">
+										<span class="our__gyms-accent">5</span> из 17
+									</p>
+									<button
+										class="our__gyms-buttons__btn_right our__gyms-button"
+										aria-label="Кнопка вправо"
+										title="Вправо"
+									>
+										<svg
+											class="our__gyms-buttons-arrow-right our__gyms-buttons-arrow"
+											width="12"
+											height="19"
+										>
+											<use href="icons/sprite.svg#arrow"></use>
+										</svg>
+									</button>
+								</div>
 							</div>
+							<button
+								class="our__gyms__btn-buy buy-btn letter-sp-5"
+								title="Забронировать"
+								aria-label="кнопка забронировать"
+								data-modal-button="buy"
+								data-modal-speed="300"
+							>
+								Забронировать
+							</button>
 						</div>
-						<!-- <button
-							class="hero__btn-buy letter-sp-5"
-							title="Забронировать"
-							aria-label="кнопка забронировать"
-							data-modal-button="buy"
-							data-modal-speed="300"
-						>
-							Забронировать
-						</button> -->
+					</div>
+				</div>
+			</section>
+			<section class="benefits">
+				<div class="benefits__container container">
+					<h2 class="benefits__title title-xxl">
+						<span class="top">наши</span>Преимущества
+					</h2>
+					<p class="benefits__main-text text-xxl">Почему гости выбирают нас</p>
+					<div class="benefits__wrapper">
+						<ul class="benefits__list letter-sp-3">
+							<li class="benefits__item">
+								<header class="benefits__item-header benefits__item-header-1">
+									<svg class="benefits__icon" width="80" height="80">
+										<use href="./icons/sprite.svg#t-shirt"></use>
+									</svg>
+									<p class="benefits__text">
+										Никакого дресс-<span class="bottom">контроля</span>
+									</p>
+								</header>
+							</li>
+							<li class="benefits__item">
+								<header class="benefits__item-header benefits__item-header-2">
+									<svg class="benefits__icon" width="86" height="86">
+										<use href="./icons/sprite.svg#icon-cd"></use>
+									</svg>
+								</header>
+								<footer class="benefits__item-footer">
+									<p class="benefits__text">~ 40.000 песен в сет листе</p>
+									<ul class="benefits__list-benefits lh-24 letter-sp-3">
+										<li class="benefits__list-benefits__item">
+											Более 50,000 студийных фонограмм
+										</li>
+										<li class="benefits__list-benefits__item">
+											Ежемесячное обновления репертуара
+										</li>
+									</ul>
+								</footer>
+							</li>
+							<li class="benefits__item">
+								<header class="benefits__item-header">
+									<svg class="benefits__icon" width="80" height="80">
+										<use href="./icons/sprite.svg#icon-people"></use>
+									</svg>
+								</header>
+								<footer class="benefits__item-footer">
+									<p class="benefits__text">Индивидуальные залы</p>
+									<ul class="benefits__list-benefits lh-24 letter-sp-3">
+										<li class="benefits__list-benefits__item">
+											Только Ваша компания
+										</li>
+									</ul>
+								</footer>
+							</li>
+							<li class="benefits__item">
+								<header class="benefits__item-header">
+									<svg class="benefits__icon" width="83" height="83">
+										<use href="./icons/sprite.svg#cash_hand"></use>
+									</svg>
+								</header>
+								<footer class="benefits__item-footer">
+									<p class="benefits__text">Без депозита</p>
+									<ul class="benefits__list-benefits letter-sp-3 lh-24">
+										<li class="benefits__list-benefits__item">
+											<strong class="accent">Мы не берем депозит</strong>
+										</li>
+										<li class="benefits__list-benefits__item">
+											Оплата происходит за человека в час
+										</li>
+									</ul>
+								</footer>
+							</li>
+							<li class="benefits__item">
+								<header class="benefits__item-header">
+									<svg class="benefits__icon" width="86" height="86">
+										<use href="./icons/sprite.svg#target-ico"></use>
+									</svg>
+								</header>
+								<footer class="benefits__item-footer">
+									<p class="benefits__text">В самом центре Москвы</p>
+									<ul class="benefits__list-benefits lh-24 letter-sp-3">
+										<li class="benefits__list-benefits__item">м. Лубянка</li>
+									</ul>
+								</footer>
+							</li>
+							<li class="benefits__item">
+								<header class="benefits__item-header">
+									<svg class="benefits__icon" width="73" height="73">
+										<use href="./icons/sprite.svg#bottle-champagne-icon"></use>
+									</svg>
+								</header>
+								<footer class="benefits__item-footer benefits__item-footer--allowance">
+									<p class="benefits__text">Нет пробкового сбора</p>
+									<ul class="benefits__list-benefits lh-24 letter-sp-3">
+										<li
+											class="benefits__list-benefits__item benefits__list-benefits__item benefits__list-benefits__item--allowance"
+										>
+											Можно приносить с собой еду, напитки
+											<span class="benefits__list-benefits__item-sentence"
+												>и алкоголь
+												<span class="accent">без пробкового сбора</span></span
+											>
+										</li>
+									</ul>
+								</footer>
+							</li>
+						</ul>
+						<!-- <div class="benefits__img-wrapper">
+              <picture>
+                <source srcset="./images/benefits/benefits__microphone.webp" type="image/webp">
+                <img class="benefits__img-img" src="./images/benefits/benefits__microphone.png"
+                width="450" height="684" alt="Декоративное изображение винтажного микрофона на тёмном фоне">
+              </picture>
+            </div> -->
 					</div>
 				</div>
 			</section>
@@ -336,7 +962,6 @@
 						src="https://yandex.ru/map-widget/v1/?um=constructor%3Af7cb417d0a17e6e0592507b84cc55d9c9ef007acceadc57f87f442175ed93447&amp;source=constructor"
 						width="500"
 						height="400"
-						frameborder="0"
 						title="Карта"
 					></iframe>
 				</div>
@@ -366,7 +991,7 @@
 							><label class="modal__form-label" for="number"
 								><input
 									name="number"
-									type="text"
+									type="number"
 									placeholder="Введите свой телефон" /></label
 							><label class="modal__form-label" for="email"
 								><input
