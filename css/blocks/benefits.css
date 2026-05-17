@@ -172,8 +172,8 @@
 
 @media (width > 772px) {
 	.benefits__text {
-		font-size: 14px;
-		line-height: 18px;
+		font-size: 18px;
+    line-height: 24px;
 	}
 }
 
