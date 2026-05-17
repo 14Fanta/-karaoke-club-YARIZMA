@@ -3,7 +3,12 @@
 .our__gyms {
 	background-color: var(--second-bg-color);
   margin-bottom: 89px;
-  /* -webkit-overflow:clip ; */
+}
+
+@media (width <= 768px) {
+  .our__gyms {
+  margin-bottom: 61px;
+}
 }
 
 .our__gyms-container {
